@@ -210,7 +210,7 @@ export async function generateContent({ type, topic, sourceMaterial }, onProgres
     return { type, topic, generatedAt: new Date().toISOString(), ...content };
   }
 
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = import.meta.env.VITE_API_URL || 'https://sms-uywv.onrender.com';
   if (apiUrl) {
     try {
       onProgress({ label: 'Connecting to backend API…', pct: 20 });
