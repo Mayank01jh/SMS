@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
+    "build": "node -e \"console.log('Server build complete')\"",
     "dev": "node --watch index.js"
   },
   "dependencies": {
