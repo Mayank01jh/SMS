@@ -59,7 +59,7 @@ export function deleteSession(id) {
 const DEFAULT_SETTINGS = {
   apiProvider: 'demo', // 'openai' | 'gemini' | 'demo'
   apiKey: '',
-  geminiModel: 'gemini-1.5-flash',
+  geminiModel: 'gemini-3.8-flash',
   openaiModel: 'gpt-4o-mini',
 };
 

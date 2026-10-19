@@ -120,9 +120,9 @@ export default function SettingsPanel({ onClose }) {
                 value={settings.geminiModel}
                 onChange={(e) => update('geminiModel', e.target.value)}
               >
-                <option value="gemini-1.5-flash">gemini-1.5-flash (fast)</option>
-                <option value="gemini-1.5-pro">gemini-1.5-pro (most capable)</option>
-                <option value="gemini-2.0-flash">gemini-2.0-flash</option>
+                <option value="gemini-3.8-flash">gemini-3.8-flash (recommended, fast & latest)</option>
+                <option value="gemini-2.5-pro">gemini-2.5-pro (high depth)</option>
+                <option value="gemini-1.5-flash">gemini-1.5-flash</option>
               </select>
             </section>
           )}

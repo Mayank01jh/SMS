@@ -107,7 +107,7 @@ app.post('/api/synthesize', async (req, res) => {
 
     // If Gemini requested and key available
     if (provider === 'gemini' && effectiveApiKey) {
-      const geminiModel = model || process.env.GEMINI_MODEL || 'gemini-1.5-flash';
+      const geminiModel = model || process.env.GEMINI_MODEL || 'gemini-3.8-flash';
       const geminiRes = await fetch(
         `https://generativelanguage.googleapis.com/v1beta/models/${geminiModel}:generateContent?key=${effectiveApiKey}`,
         {
