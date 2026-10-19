@@ -1,0 +1,195 @@
+.study-guide-editor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-sm);
+}
+
+.study-guide-editor__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-xs) 0;
+  gap: var(--sp-md);
+  flex-wrap: wrap;
+}
+
+.study-guide-editor__toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-sm);
+}
+
+.study-guide-editor__section-count {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+/* Progress tracker */
+.study-guide-editor__progress {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-sm);
+}
+
+.study-guide-editor__progress-bar {
+  width: 80px;
+  height: 4px;
+  background: var(--light-grey);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.study-guide-editor__progress-fill {
+  height: 100%;
+  background: #2D7A46;
+  border-radius: 2px;
+  transition: width 300ms ease;
+}
+
+.study-guide-editor__progress-label {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.study-guide-editor__sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-sm);
+}
+
+.study-guide-editor__add {
+  width: 100%;
+  justify-content: center;
+  border: 1.5px dashed var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-sm);
+  color: var(--text-muted);
+  font-size: var(--fs-sm);
+}
+.study-guide-editor__add:hover {
+  border-color: var(--black);
+  color: var(--black);
+  background: transparent;
+}
+
+/* Section editor */
+.section-editor {
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  overflow: hidden;
+  transition: border-color var(--t-fast), box-shadow var(--t-fast), background var(--t-fast);
+  position: relative;
+}
+.section-editor:hover {
+  border-color: var(--border-dark);
+}
+.section-editor--editing {
+  border-color: var(--black);
+  box-shadow: 0 0 0 3px rgba(17,17,17,.06);
+}
+.section-editor--reviewed {
+  background: #FAFDF8;
+  border-color: #C3E6CB;
+}
+
+/* Review checkbox */
+.section-editor__review-check {
+  position: absolute;
+  top: var(--sp-md);
+  right: var(--sp-md);
+  cursor: pointer;
+  z-index: 1;
+}
+.section-editor__review-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.section-editor__review-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid var(--border-dark);
+  border-radius: 50%;
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--white);
+  transition: all var(--t-fast);
+  user-select: none;
+}
+.section-editor__review-indicator--done {
+  background: #2D7A46;
+  border-color: #2D7A46;
+  color: white;
+}
+
+.section-editor__heading {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  padding: var(--sp-md) 44px var(--sp-sm) var(--sp-md);
+  line-height: 1.3;
+}
+.section-editor__heading--reviewed {
+  color: var(--mid-grey);
+}
+.section-editor__heading-input {
+  margin: var(--sp-md) var(--sp-md) 0;
+  width: calc(100% - var(--sp-md) * 2);
+  font-weight: 600;
+}
+
+.section-editor__body {
+  padding: 0 var(--sp-md) var(--sp-md);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+.section-editor__body ul {
+  padding-left: var(--sp-md);
+  margin: var(--sp-sm) 0;
+}
+.section-editor__body li {
+  margin-bottom: var(--sp-xs);
+}
+.section-editor__body strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.section-editor__body .callout-warn {
+  padding: var(--sp-sm) var(--sp-md);
+  background: #FFFBEA;
+  border-left: 3px solid #F0C040;
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  margin: var(--sp-sm) 0;
+  font-size: var(--fs-xs);
+  color: var(--charcoal);
+}
+.section-editor__body-input {
+  margin: 0 var(--sp-md) var(--sp-sm);
+  width: calc(100% - var(--sp-md) * 2);
+  font-size: var(--fs-sm);
+  min-height: 140px;
+}
+
+.section-editor__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-xs);
+  padding: var(--sp-xs) var(--sp-sm) var(--sp-sm);
+  border-top: 1px solid var(--border);
+  background: var(--off-white);
+}
+
+.section-editor__delete {
+  margin-left: auto;
+  color: var(--mid-grey);
+}
+.section-editor__delete:hover {
+  color: #B00020;
+  background: #FFF3F3;
+}
